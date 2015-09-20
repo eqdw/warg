@@ -27,3 +27,7 @@ import_config "#{Mix.env}.exs"
 config :phoenix, :generators,
   migration: true,
   binary_id: false
+
+config :passport,
+  repo: Warg.Repo,
+  user_class: Warg.User

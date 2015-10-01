@@ -12,12 +12,13 @@ defmodule Warg.RegistrationController do
 
   def create(conn, %{"registration" => registration_params}) do
     case RegistrationManager.register(registration_params) do
-      {:ok, changeset} -> conn
-        |> put_flash(:info, "Registration success")
-        |> redirect(to: page_path(conn, :index))
-      {:error, changeset} -> conn
-        |> render("new.html", user: changeset)
+      {:ok, changeset} ->
+        conn
+          |> put_flash(:info, "Registration success")
+          |> redirect(to: page_path(conn, :index))
+      {:error, changeset} ->
+        conn
+          |> render("new.html", user: changeset)
     end
   end
-
 end

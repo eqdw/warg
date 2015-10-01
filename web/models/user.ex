@@ -9,7 +9,7 @@ defmodule Warg.User do
     timestamps
   end
 
-  @required_fields ~w(name email crypted_password)
+  @required_fields ~w(name email)
   @optional_fields ~w()
 
   @doc """

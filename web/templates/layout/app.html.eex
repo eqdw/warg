@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Phoenix!</title>
+    <title>Wherewoof - Where are the dogs at?</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
@@ -15,7 +15,11 @@
     <div class="container" role="main">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
+          <% for {k,v} <- main_menu_links do %>
+            <% IO.puts("<a href=#{v}>#{k}</a>") %>
+          <% end %>
+
+          <%= render Warg.NavView, "main_menu.html", links: main_menu_links %>
         </ul>
         <span class="logo"></span>
       </div>

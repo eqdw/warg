@@ -1,0 +1,6 @@
+<%= for {name, href} <- @links do %>
+  <% IO.puts("name: #{name}, href: #{href}") %>
+  <li role="presentation">
+    <a href="<%=href%>"><%=name%></a>
+  </li>
+<%= end %>

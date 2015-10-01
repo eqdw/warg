@@ -16,8 +16,11 @@ defmodule Warg.Router do
   scope "/", Warg do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
-    get "/ehlo", EhloController, :index
+    get "/",                PageController, :index
+    get "/ehlo",            EhloController, :index
+    get "/ehlo/:messenger", EhloController, :show
+
+    resources "/users", UserController
 
     get "/login", SessionController, :new
     post "/login", SessionController, :create

@@ -21,10 +21,10 @@
 
           <%= render Warg.NavView, "main_menu.html", links: main_menu_links %>
         </ul>
-        <span class="logo"></span>
+        <h3 class="logo">Wherewoof</span>
       </div>
 
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <p class="alert alert-info"   role="alert"><%= get_flash(@conn,  :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
       <%= @inner %>

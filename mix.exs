@@ -35,6 +35,7 @@ defmodule Warg.Mixfile do
      { :phoenix_html,        "~> 2.1"             },
      { :phoenix_live_reload, "~> 1.0", only: :dev },
      { :cowboy,              "~> 1.0"             },
+     { :phoenix_haml,        "~> 0.2"             },
      { :passport, git: "https://github.com/opendrops/passport.git"}]
   end
 end

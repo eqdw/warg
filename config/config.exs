@@ -31,3 +31,6 @@ config :phoenix, :generators,
 config :passport,
   repo: Warg.Repo,
   user_class: Warg.User
+
+config :phoenix, :template_engines,
+  haml: PhoenixHaml.Engine
